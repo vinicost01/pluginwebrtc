@@ -1,6 +1,6 @@
 const remoteVideo = document.getElementById('remoteVideo');
 
-const ws = new WebSocket('wss://3.82.220.57:8080');
+const ws = new WebSocket('wss://<ipservidor>:8080');
 
 let pc;
 
@@ -18,7 +18,7 @@ function answer(offer) {
   const configuration = {
     iceServers: [
       {
-        urls: ['turn:3.82.220.57:3478'],
+        urls: ['turn:<ipservidor>:3478'],
         username: 'vinicost',
         credential: 'vinicost'
       }
